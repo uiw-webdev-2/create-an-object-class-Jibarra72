@@ -1,22 +1,29 @@
 /**
  * Create a class for the Backpack object type.
- * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
  */
-import Backpack from "./Backpack.js";
+ import House from "./house.js";
 
-const everydayPack = new Backpack(
-  "Everyday Backpack",
-  30,
-  "grey",
-  15,
-  26,
-  26,
-  false
-);
+ const Land = new House(
+   "Red",
+   15,
+   26,
+   "Wood"
+ );
+ 
+ const content = `
+  <main>
+    <article>
+      <h1>House</h1>
+      <ul>
+        <li>Color:${Land.color}</li>
+        <li>Height:${Land.height}</li>
+        <li>Width:${Land.width}</li>
+        <li>Material:${Land.material}</li>
+      </ul>
+    </article>
+  </main>`;
+ 
 
-const content = ``;
-
-document.body.innerHTML = content;
-
-console.log("The everydayPack object:", everydayPack);
-console.log("The pocketNum value:", everydayPack.pocketNum);
+ 
+ document.body.innerHTML = content;
